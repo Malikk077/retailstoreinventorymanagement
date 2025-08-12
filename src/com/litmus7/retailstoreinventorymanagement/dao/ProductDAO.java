@@ -1,6 +1,6 @@
 package com.litmus7.retailstoreinventorymanagement.dao;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import com.litmus7.retailstoreinventorymanagement.dto.Product;
