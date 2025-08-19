@@ -1,8 +1,6 @@
 package com.litmus7.retailstoreinventorymanagement.util;
-
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
+
 
 import com.litmus7.retailstoreinventorymanagement.dto.Product;
 

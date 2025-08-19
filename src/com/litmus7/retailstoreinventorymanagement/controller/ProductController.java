@@ -1,5 +1,4 @@
 package com.litmus7.retailstoreinventorymanagement.controller;
-import java.util.Comparator;
 import java.util.List;
 import com.litmus7.retailstoreinventorymanagement.dto.Product;
 import com.litmus7.retailstoreinventorymanagement.dto.Response;
@@ -21,8 +20,6 @@ public class ProductController {
 			return new Response<>(500,"sample error");
 		}	
 	}
-	
-	
 	
 	public Response<List<Product>> readAllProducts(){
 		//check the return type and wrap a response to pass to client check if its null and respond accordingly
@@ -47,10 +44,10 @@ public class ProductController {
 		
 	}
 		
-	public Response<List<Product>> sortProduct(Comparator<Product> comparator){
+	public Response<List<Product>> sortProduct(String sorttype){
 		try{
 			//check the return type and wrap a response to pass to client check if its null and respond accordingly
-			List<Product> product =productService.sortProduct(comparator);
+			List<Product> product =productService.sortProduct(sorttype);
 			return new Response<>(200,"sample Response",product);
 		}catch(ProductServiceException e) {
 			return new Response<>(500,"sample error");

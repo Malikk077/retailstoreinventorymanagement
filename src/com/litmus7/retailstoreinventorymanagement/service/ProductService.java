@@ -5,6 +5,7 @@ import com.litmus7.retailstoreinventorymanagement.dao.ProductDAO;
 import com.litmus7.retailstoreinventorymanagement.dto.Product;
 import com.litmus7.retailstoreinventorymanagement.exception.ProductDataAccessException;
 import com.litmus7.retailstoreinventorymanagement.exception.ProductServiceException;
+import com.litmus7.retailstoreinventorymanagement.util.SortingUtil;
 import com.litmus7.retailstoreinventorymanagement.util.ValidationUtil;
 
 public class ProductService {
@@ -47,11 +48,13 @@ public class ProductService {
 		return null;			
 	}
 	
-	public List<Product> sortProduct(Comparator<Product> comparator)throws ProductServiceException{
+	public List<Product> sortProduct(String sorttype)throws ProductServiceException{
 		try{
 			List<Product> product= productDao.retriveAllProducts();
 			// retrieve all product from dao 
 			// sort the returned product using Switch case within the util funtion
+			//using switchcase find the comparator needed ****
+			Comparator<Product> comparator = SortingUtil.nameAsc();//only example call,find the actual one using switch case
 			product.sort(comparator);
 			// return the new refined List
 			return product;	

@@ -33,7 +33,7 @@ public class RetailStoreApp {
 		
 		//4.Sort Products - User can choose a sorting option:1.ascending 2.descending 3.by name 
 		//pass the choice from the user as an argument while calling the controller function  sortProduct and store it in response object
-		Response<List<Product>> sortProductResponse=productController.selectByCateogory(null);//comparator type
+		Response<List<Product>> sortProductResponse=productController.selectByCateogory("sort type");
 		////using sortProductResponse for presenting  the  product data accordingly
 		
 	}
