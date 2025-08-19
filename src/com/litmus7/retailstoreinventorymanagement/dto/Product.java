@@ -4,7 +4,13 @@ abstract public class Product {
 	private int productId;
 	private String productName;
 	private Double price;
-	private String status;
+	protected  PruductStatus status;
+	public PruductStatus getStatus() {
+		return status;
+	}
+	public void setStatus(PruductStatus status) {
+		this.status = status;
+	}
 	private String productType;
 	
 	
@@ -13,12 +19,6 @@ abstract public class Product {
 	}
 	public void setProductType(String productType) {
 		this.productType = productType;
-	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
 	}
 	public int getProductId() {
 		return productId;
